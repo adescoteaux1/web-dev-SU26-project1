@@ -1,0 +1,27 @@
+{
+  "name": "ally-homepage",
+  "version": "1.0.0",
+  "description": "Personal homepage for Ally Descoteaux — software engineer and CS & Math student at Northeastern University.",
+  "type": "module",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx live-server --port=3000",
+    "format": "prettier --write \"**/*.{html,css,js}\"",
+    "format:check": "prettier --check \"**/*.{html,css,js}\"",
+    "lint": "eslint js/**/*.js",
+    "validate": "echo 'Run https://validator.w3.org to validate HTML'"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "live-server": "^1.2.2",
+    "prettier": "^3.2.5",
+    "serve": "^14.2.1"
+  },
+  "license": "MIT",
+  "author": "Ally Descoteaux <descoteaux.a@northeastern.edu>",
+  "homepage": "https://github.com/adescoteaux1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adescoteaux1/homepage"
+  }
+}

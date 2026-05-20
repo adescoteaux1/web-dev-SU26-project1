@@ -1,0 +1,9 @@
+# deps
+node_modules/
+
+# macOS
+.DS_Store
+
+.vscode/
+.idea/
+*.swp
