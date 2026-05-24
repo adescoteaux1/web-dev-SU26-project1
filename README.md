@@ -95,14 +95,30 @@ npm run lint
 
 **Model:** Claude Sonnet 4.6 (Anthropic)
 
-**Used for:** Full code generation — HTML, CSS, and JS modules — based on my personal information and a brutalist editorial design direction I specified.
+**Used for:** Initial generation of the "Beyond Code" page as required by the rubric, some revisions were done by me to content and formatting
 
 **Prompts (paraphrased):**
-- "Build a personal homepage with a brutalist editorial magazine aesthetic — ruled lines, condensed type, newspaper columns, asymmetric layout. Light theme on a warm paper background."
-- "Redo the styling completely — it's too common of an AI setup."
-- "Update bio: finished BS April 2026, finishing Plus One MSCS at Northeastern in April 2027."
+- "build a simple html page i can add to my person website that shows how my diferent hobbies, hiking, baking, puzzles, reqding all have qn impact on who i am and my work as a software engineer. this should show how many different aspects of ourselves play a part in education/work success. add a disclaimer that the page is written by AI, use these main styling themes
 
-**How I used it:** AI scaffolded all files. I reviewed content for accuracy, edited the bio and experience to match my actual background, adjusted copy to sound like me, and tested the terminal commands. All real project links and employer names are mine.
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
+/* ============================
+   Tokens
+   ============================ */
+:root {
+  --ink: #1a1713;
+  --paper: #f5f0e8;
+  --paper-2: #ece6d8;
+  --rule: #1a1713;
+  --rule-light: #c8bfad;
+  --red: #c0392b;
+  --font-serif: "Playfair Display", "Georgia", serif;
+  --font-body: "Barlow", "Helvetica Neue", sans-serif;
+  --font-cond: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+  --max: 1160px;
+  --col: calc((100% - 4rem) / 12);
+  --transition: 0.18s ease;
+}"
 
 ---
 

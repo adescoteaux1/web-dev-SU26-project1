@@ -184,6 +184,7 @@ a {
 }
 
 .section-rule__label {
+  margin: 0;
   font-family: var(--font-cond);
   font-size: 0.72rem;
   font-weight: 700;
