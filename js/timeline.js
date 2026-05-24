@@ -1,25 +1,24 @@
 /**
- * Reveals timeline items as the user scrolls into view.
- * Adds a staggered delay per item.
+ * Staggered fade-in for experience table rows on scroll.
  */
 export function initTimeline() {
-  const items = document.querySelectorAll(".timeline__item");
-  if (!items.length) return;
+  const rows = document.querySelectorAll("#expBody tr");
+  if (!rows.length) return;
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const el = entry.target;
-          const index = [...items].indexOf(el);
-          el.style.transitionDelay = `${index * 80}ms`;
-          el.classList.add("is-visible");
-          observer.unobserve(el);
+          const row = entry.target;
+          const index = [...rows].indexOf(row);
+          row.style.transitionDelay = `${index * 60}ms`;
+          row.classList.add("is-visible");
+          observer.unobserve(row);
         }
       });
     },
-    { threshold: 0.2 }
+    { threshold: 0.15 }
   );
 
-  items.forEach((item) => observer.observe(item));
+  rows.forEach((row) => observer.observe(row));
 }

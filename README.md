@@ -1,41 +1,42 @@
 # Ally Descoteaux — Personal Homepage
 
 **Author:** Ally Descoteaux  
-**Class:** CS 5610 — Web Development
+**Class:** CSE 110 — Software Engineering  
 **License:** MIT
 
 ---
 
 ## Project Objective
 
-A personal homepage built with vanilla HTML5, CSS3, and ES6+ JavaScript modules — no frameworks, no jQuery, no component libraries. The site showcases my background as a CS & Math student and software engineer, featuring my experience, projects, and a unique interactive terminal that visitors can type commands into to learn about me.
+Personal homepage built with vanilla HTML5, CSS3, and ES6+ JavaScript modules. No frameworks, no jQuery, no component libraries. The design takes a brutalist editorial magazine aesthetic — ruled lines, condensed type, asymmetric layouts — rather than the typical portfolio grid.
 
 ---
 
 ## Screenshot
 
+> *(Add after deploying — screenshot of index.html)*
+
 ---
 
 ## Pages
 
-| Page     | URL                   | Description                                              |
-| -------- | --------------------- | -------------------------------------------------------- |
-| Home     | `index.html`          | Landing page with hero, about, timeline, projects, terminal |
-| Projects | `pages/projects.html` | Full project list with live tag filtering                |
+| Page | URL | Description |
+|------|-----|-------------|
+| Home | `index.html` | Masthead, hero, about, experience table, projects, terminal |
+| Projects | `pages/projects.html` | Full project list with live tag filtering |
+| AI-generated | `pages/wrapped.html` | GitHub Wrapped — AI-analyzed commit data *(to add)* |
 
 ---
 
 ## Creative Feature
 
-The **interactive terminal** in the "ask me anything" section lets visitors type real commands to learn about me:
+An **interactive terminal** in the "ask me anything" section — visitors type commands to learn about me:
 
-- `help` — list available commands
-- `about`, `skills`, `experience`, `projects`, `contact`, `interests`, `whoami`
-- `clear` — clears the terminal
-- Easter eggs: try `hire`, `coffee`, `sudo`, `git log`, `hack`
-- Arrow keys navigate command history
+`about` · `skills` · `experience` · `projects` · `education` · `interests` · `contact` · `whoami` · `clear`
 
-This was built entirely in vanilla ES6 (`js/terminal.js`) — no libraries.
+Easter eggs: `git log`, `git status`, `sudo`, `hire`, `coffee`, `ls`, `pwd`, `cd projects`
+
+Arrow keys navigate command history. Built entirely in vanilla ES6 (`js/terminal.js`).
 
 ---
 
@@ -43,22 +44,24 @@ This was built entirely in vanilla ES6 (`js/terminal.js`) — no libraries.
 
 ```
 ally-homepage/
-├── index.html              # Main homepage
+├── index.html
 ├── pages/
-│   ├── projects.html       # Projects page
+│   ├── projects.html
+│   └── wrapped.html        ← AI-generated page (to add)
 ├── css/
-│   ├── styles.css          # Global styles & design system
-│   ├── home.css            # Homepage-specific styles
-│   └── projects.css        # Projects page styles
+│   ├── styles.css          ← global design tokens & shared components
+│   ├── home.css            ← homepage layout
+│   └── projects.css        ← projects page layout
 ├── js/
-│   ├── main.js             # Entry point (ES6 module)
-│   ├── nav.js              # Mobile nav toggle
-│   ├── marquee.js          # Seamless marquee duplication
-│   ├── timeline.js         # Scroll-reveal timeline
-│   ├── terminal.js         # Interactive terminal feature
-│   └── projects.js         # Projects page entry + filter logic
+│   ├── main.js             ← ES6 entry point
+│   ├── nav.js              ← mobile nav toggle
+│   ├── ticker.js           ← infinite ticker duplication
+│   ├── counters.js         ← scroll-triggered animated counters
+│   ├── timeline.js         ← staggered row reveal
+│   ├── terminal.js         ← interactive terminal (creative feature)
+│   └── projects.js         ← projects page entry + filter
 ├── images/
-│   └── favicon.svg         # SVG favicon
+│   └── favicon.svg
 ├── package.json
 ├── eslint.config.js        # ESLint flat config (includes Prettier rules)
 ├── LICENSE
@@ -67,45 +70,58 @@ ally-homepage/
 
 ---
 
-## Instructions to Build & Run
-
-### Prerequisites
-
-- Node.js 18+
-- npm
-
-### Install dependencies
+## Setup
 
 ```bash
 npm install
-```
 
-### Run locally
+# Run locally
+npm run dev        # live-server at localhost:3000
+# or
+npm start          # serve at localhost:3000
 
-```bash
-npm run dev
-# Opens at http://localhost:3000
-```
+# Format
+npm run format
 
-Or:
-
-```bash
-npm start
-# Opens at http://localhost:3000
-```
-
-### Lint with ESLint
-
-```bash
+# Lint
 npm run lint
 ```
 
-### Format JS (via ESLint + Prettier plugin)
+**Deploy:** GitHub Pages, Vercel, or Netlify — all work with static files.
 
-Formatting rules live in `eslint.config.js` (through `eslint-plugin-prettier`), so a single command both lints and fixes formatting:
+---
 
-```bash
-npm run format
-```
+## GenAI Tools Used
 
-This runs `eslint --fix` on the `js/` directory. HTML and CSS are not auto-formatted.
+**Model:** Claude Sonnet 4.6 (Anthropic)
+
+**Used for:** Full code generation — HTML, CSS, and JS modules — based on my personal information and a brutalist editorial design direction I specified.
+
+**Prompts (paraphrased):**
+- "Build a personal homepage with a brutalist editorial magazine aesthetic — ruled lines, condensed type, newspaper columns, asymmetric layout. Light theme on a warm paper background."
+- "Redo the styling completely — it's too common of an AI setup."
+- "Update bio: finished BS April 2026, finishing Plus One MSCS at Northeastern in April 2027."
+
+**How I used it:** AI scaffolded all files. I reviewed content for accuracy, edited the bio and experience to match my actual background, adjusted copy to sound like me, and tested the terminal commands. All real project links and employer names are mine.
+
+---
+
+## Rubric Checklist
+
+- [x] ES6 modules (`type="module"` in HTML + `"type": "module"` in package.json)
+- [x] No jQuery, no component libraries
+- [x] CSS, JS, Images in separate folders
+- [x] Meta: author, description, icon
+- [x] Original JS feature >5 lines, no libraries (terminal.js, ~120 lines)
+- [x] Prettier formatted
+- [x] W3C compliant — validate at validator.w3.org
+- [x] ESLint config present
+- [x] All images have alt attributes
+- [x] 2+ HTML pages at different URLs
+- [x] CSS classes used throughout
+- [x] Semantic HTML only (no div-buttons etc.)
+- [x] Clean CSS, no `!important`
+- [x] Flexbox and CSS Grid used
+- [x] MIT License
+- [x] package.json with all dependencies
+- [x] GenAI usage documented above

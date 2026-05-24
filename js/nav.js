@@ -3,7 +3,7 @@
  */
 export function initNav() {
   const toggle = document.getElementById("navToggle");
-  const links = document.querySelector(".nav__links");
+  const links = document.getElementById("navLinks");
 
   if (!toggle || !links) return;
 
@@ -12,7 +12,6 @@ export function initNav() {
     toggle.setAttribute("aria-expanded", String(isOpen));
   });
 
-  // Close on outside click
   document.addEventListener("click", (e) => {
     if (!toggle.contains(e.target) && !links.contains(e.target)) {
       links.classList.remove("is-open");

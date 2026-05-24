@@ -1,31 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&family=Fira+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
 
 /* ============================
-   Design Tokens
+   Tokens
    ============================ */
 :root {
-  --clr-bg: #faf7f2;
-  --clr-surface: #f3ede3;
-  --clr-surface-2: #ede6d8;
-  --clr-border: #ddd5c5;
-  --clr-text: #1c1a17;
-  --clr-text-muted: #7a7065;
-  --clr-accent: #c0522a;
-  --clr-accent-light: #f0d9cf;
-  --clr-accent-dim: #9e4122;
-  --font-display: "Lora", "Georgia", serif;
-  --font-body: "Outfit", "Helvetica Neue", sans-serif;
-  --font-mono: "Fira Mono", "Courier New", monospace;
-  --radius: 6px;
-  --radius-lg: 12px;
-  --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
-  --max-width: 1080px;
-  --shadow-sm: 0 1px 3px rgba(28, 26, 23, 0.08);
-  --shadow-md: 0 4px 16px rgba(28, 26, 23, 0.1);
+  --ink: #1a1713;
+  --paper: #f5f0e8;
+  --paper-2: #ece6d8;
+  --rule: #1a1713;
+  --rule-light: #c8bfad;
+  --red: #c0392b;
+  --font-serif: "Playfair Display", "Georgia", serif;
+  --font-body: "Barlow", "Helvetica Neue", sans-serif;
+  --font-cond: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+  --max: 1160px;
+  --col: calc((100% - 4rem) / 12);
+  --transition: 0.18s ease;
 }
 
 /* ============================
-   Reset & Base
+   Reset
    ============================ */
 *,
 *::before,
@@ -40,109 +35,197 @@ html {
 }
 
 body {
-  background-color: var(--clr-bg);
-  color: var(--clr-text);
+  background: var(--paper);
+  color: var(--ink);
   font-family: var(--font-body);
   font-size: 1rem;
-  line-height: 1.65;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  min-height: 100vh;
 }
 
-/* Subtle paper texture via repeating gradient */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-  background-size: 300px 300px;
+a {
+  color: inherit;
 }
 
 /* ============================
-   Navigation
+   Masthead / Nav
    ============================ */
-.nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
+.masthead {
+  border-bottom: 3px solid var(--ink);
+  padding: 0 2rem;
+}
+
+.masthead__top {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.1rem 2rem;
-  background: rgba(250, 247, 242, 0.9);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--clr-border);
+  align-items: stretch;
+  border-bottom: 1px solid var(--rule-light);
 }
 
-.nav__logo {
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-style: italic;
-  color: var(--clr-text);
-  text-decoration: none;
-  letter-spacing: -0.01em;
-  transition: color var(--transition);
+.masthead__index {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--rule-light);
+  padding: 0.6rem 0;
+  flex: 1;
 }
 
-.nav__logo:hover {
-  color: var(--clr-accent);
-}
-
-.nav__links {
+.masthead__links {
   display: flex;
-  gap: 2rem;
   list-style: none;
+  border-left: 1px solid var(--rule-light);
 }
 
-.nav__link {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--clr-text-muted);
+.masthead__links li {
+  border-right: 1px solid var(--rule-light);
+}
+
+.masthead__link {
+  display: block;
+  font-family: var(--font-cond);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 0.02em;
-  transition: color var(--transition);
+  color: var(--ink);
+  padding: 0.6rem 1.1rem;
+  transition: background var(--transition), color var(--transition);
 }
 
-.nav__link:hover,
-.nav__link--active {
-  color: var(--clr-text);
+.masthead__link:hover,
+.masthead__link--active {
+  background: var(--ink);
+  color: var(--paper);
 }
 
-.nav__link--active {
-  color: var(--clr-accent);
+.masthead__name {
+  padding: 1rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.masthead__name h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 8vw, 6rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.4em;
+}
+
+.masthead__name h1 em {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.7em;
+  color: var(--red);
+}
+
+.masthead__sub {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--rule-light);
+  margin-top: 0.5rem;
 }
 
 .nav__toggle {
   display: none;
-  flex-direction: column;
-  gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
+  padding: 0.5rem;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .nav__toggle span {
   display: block;
-  width: 22px;
+  width: 20px;
   height: 1.5px;
-  background: var(--clr-text);
-  border-radius: 2px;
-  transition: var(--transition);
+  background: var(--ink);
 }
 
 /* ============================
-   Layout
+   Main layout
    ============================ */
 .main {
-  position: relative;
-  z-index: 1;
-  max-width: var(--max-width);
+  max-width: var(--max);
   margin: 0 auto;
   padding: 0 2rem 6rem;
+}
+
+/* ============================
+   Typographic utilities
+   ============================ */
+.kicker {
+  font-family: var(--font-cond);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.section-rule {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-top: 2px solid var(--ink);
+  padding-top: 0.6rem;
+}
+
+.section-rule__label {
+  font-family: var(--font-cond);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.section-rule__line {
+  flex: 1;
+  height: 1px;
+  background: var(--rule-light);
+}
+
+.index-num {
+  font-family: var(--font-serif);
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--paper-2);
+  -webkit-text-stroke: 1px var(--rule-light);
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ============================
+   Tags / pills
+   ============================ */
+.tag {
+  display: inline-block;
+  border: 1px solid var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.05em;
+  padding: 0.15rem 0.5rem;
+  white-space: nowrap;
+  transition: background var(--transition), color var(--transition);
+}
+
+.tag:hover {
+  background: var(--ink);
+  color: var(--paper);
 }
 
 /* ============================
@@ -150,153 +233,117 @@ body::before {
    ============================ */
 .btn {
   display: inline-block;
-  padding: 0.65rem 1.4rem;
-  border-radius: var(--radius);
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-decoration: none;
-  cursor: pointer;
-  transition: var(--transition);
-  border: 1px solid transparent;
-  letter-spacing: 0.02em;
-}
-
-.btn--primary {
-  background: var(--clr-accent);
-  color: #fff;
-  border-color: var(--clr-accent);
-}
-
-.btn--primary:hover {
-  background: var(--clr-accent-dim);
-  border-color: var(--clr-accent-dim);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
-}
-
-.btn--ghost {
-  background: transparent;
-  color: var(--clr-text);
-  border-color: var(--clr-border);
-}
-
-.btn--ghost:hover {
-  border-color: var(--clr-text-muted);
-  transform: translateY(-1px);
-}
-
-.btn--outline {
-  background: transparent;
-  color: var(--clr-accent);
-  border-color: var(--clr-accent);
-}
-
-.btn--outline:hover {
-  background: var(--clr-accent-light);
-  transform: translateY(-1px);
-}
-
-/* ============================
-   Section label
-   ============================ */
-.section-label {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 500;
-  text-transform: uppercase;
+  font-family: var(--font-cond);
+  font-size: 0.8rem;
+  font-weight: 700;
   letter-spacing: 0.14em;
-  color: var(--clr-accent);
-  margin-bottom: 1.75rem;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.65rem 1.5rem;
+  border: 1.5px solid var(--ink);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+  background: transparent;
+  color: var(--ink);
 }
 
-.section-label::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: var(--clr-border);
-  max-width: 60px;
+.btn:hover {
+  background: var(--ink);
+  color: var(--paper);
 }
 
-/* ============================
-   Tags
-   ============================ */
-.tag {
-  display: inline-block;
-  padding: 0.2rem 0.55rem;
-  background: var(--clr-surface-2);
-  border: 1px solid var(--clr-border);
-  border-radius: 4px;
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  color: var(--clr-text-muted);
-  white-space: nowrap;
+.btn--fill {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.btn--fill:hover {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.btn--red {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.btn--red:hover {
+  background: var(--red);
+  color: var(--paper);
 }
 
 /* ============================
    Footer
    ============================ */
 .footer {
-  border-top: 1px solid var(--clr-border);
-  padding: 2rem;
-  text-align: center;
-  position: relative;
-  z-index: 1;
+  border-top: 2px solid var(--ink);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer__copy {
-  font-size: 0.8rem;
-  color: var(--clr-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  color: var(--rule-light);
 }
 
 .footer__copy a {
-  color: var(--clr-text-muted);
+  color: var(--ink);
   text-decoration: none;
-  transition: color var(--transition);
+  border-bottom: 1px solid var(--rule-light);
 }
 
 .footer__copy a:hover {
-  color: var(--clr-accent);
+  border-color: var(--ink);
+}
+
+.footer__issue {
+  font-family: var(--font-cond);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rule-light);
 }
 
 /* ============================
    Responsive
    ============================ */
-@media (max-width: 768px) {
-  .nav__links {
+@media (max-width: 760px) {
+  .masthead__links {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--clr-bg);
-    border-bottom: 1px solid var(--clr-border);
     flex-direction: column;
-    gap: 0;
-    padding: 0.75rem 0;
+    border-left: none;
+    border-top: 1px solid var(--rule-light);
   }
 
-  .nav__links.is-open {
+  .masthead__links.is-open {
     display: flex;
   }
 
-  .nav__link {
-    display: block;
-    padding: 0.65rem 2rem;
+  .masthead__links li {
+    border-right: none;
+    border-bottom: 1px solid var(--rule-light);
   }
 
   .nav__toggle {
     display: flex;
   }
 
-  .nav {
-    position: relative;
+  .masthead__top {
+    flex-wrap: wrap;
   }
 
   .main {
     padding: 0 1.25rem 4rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    padding: 1.25rem;
   }
 }

@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,7 +6,7 @@
     <meta name="author" content="Ally Descoteaux" />
     <meta
       name="description"
-      content="Projects by Ally Descoteaux — web apps, mobile apps, data platforms, and hackathon builds."
+      content="Projects by Ally Descoteaux — web apps, mobile platforms, data engineering, and hackathon builds."
     />
     <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
     <title>Projects — Ally Descoteaux</title>
@@ -14,50 +14,55 @@
     <link rel="stylesheet" href="../css/projects.css" />
   </head>
   <body>
-    <div class="noise-overlay"></div>
+    <header class="masthead">
+      <div class="masthead__top">
+        <span class="masthead__index">Vol. I &nbsp;·&nbsp; Boston, MA &nbsp;·&nbsp; Est. 2025</span>
+        <nav aria-label="Primary navigation">
+          <ul class="masthead__links" id="navLinks">
+            <li><a href="../index.html" class="masthead__link">Home</a></li>
+            <li><a href="./projects.html" class="masthead__link masthead__link--active">Projects</a></li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/alexandradescoteaux/"
+                class="masthead__link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/adescoteaux1"
+                class="masthead__link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="masthead__name">
+        <h1>Ally <em>&amp;</em> Code</h1>
+        <p class="masthead__sub">Software Engineer &nbsp;·&nbsp; MSCS, Northeastern University &nbsp;·&nbsp; Class of 2027</p>
+      </div>
+    </header>
 
-    <nav class="nav">
-      <a href="../index.html" class="nav__logo">ally d.</a>
-      <ul class="nav__links">
-        <li><a href="../index.html" class="nav__link">home</a></li>
-        <li>
-          <a href="./projects.html" class="nav__link nav__link--active">projects</a>
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/alexandradescoteaux/"
-            class="nav__link"
-            target="_blank"
-            rel="noopener noreferrer"
-            >linkedin</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://github.com/adescoteaux1"
-            class="nav__link"
-            target="_blank"
-            rel="noopener noreferrer"
-            >github</a
-          >
-        </li>
-      </ul>
-      <button class="nav__toggle" aria-label="Toggle navigation" id="navToggle">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
+    <main class="main">
+      <div class="page-header">
+        <span class="page-header__number" aria-hidden="true">05</span>
+        <div class="page-header__text">
+          <a href="../index.html" class="page-header__back">← back to home</a>
+          <h1 class="page-header__title">Selected Work</h1>
+          <p class="page-header__sub">Hackathons · Studio · Co-ops · Course projects</p>
+        </div>
+      </div>
 
-    <main class="main main--projects">
-      <header class="projects-header">
-        <a href="../index.html" class="back-link">← back</a>
-        <h1 class="projects-title">Projects</h1>
-        <p class="projects-subtitle">
-          A collection of things some of the things I've built — hackathons, co-ops, side projects, and studio work.
-        </p>
-      </header>
-
-      <div class="filter-bar" role="group" aria-label="Filter projects by tag">
-        <button class="filter-btn filter-btn--active" data-filter="all">all</button>
+      <div class="filter-bar" role="group" aria-label="Filter by technology">
+        <button class="filter-btn filter-btn--active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="Go">Go</button>
         <button class="filter-btn" data-filter="React">React</button>
         <button class="filter-btn" data-filter="TypeScript">TypeScript</button>
@@ -65,32 +70,31 @@
         <button class="filter-btn" data-filter="Mobile">Mobile</button>
       </div>
 
-      <div class="projects-list" id="projectsList">
-        <article class="proj" data-tags="Go TypeScript React PostgreSQL Docker">
-          <div class="proj__left">
-            <span class="proj__emoji" aria-hidden="true">🌊</span>
-            <div>
-              <h2 class="proj__title">Castaway</h2>
-              <p class="proj__meta">HackMIT · September 2024 · 24 hours</p>
+      <div class="proj-list" id="projList">
+
+        <article class="proj-row" data-tags="Go TypeScript React PostgreSQL Docker">
+          <span class="proj-row__num" aria-hidden="true">01</span>
+          <div class="proj-row__body">
+            <p class="proj-row__meta">HackMIT · September 2024 · 24 hours</p>
+            <h2 class="proj-row__title">Castaway</h2>
+            <p class="proj-row__desc">
+              An anonymous digital message-in-a-bottle platform. Users complete daily
+              self-improvement tasks and send affirmations across virtual oceans. Built
+              with a team of four in 24 hours at HackMIT.
+            </p>
+            <div class="proj-row__tags">
+              <span class="tag">Go</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">React</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Supabase</span>
             </div>
           </div>
-          <p class="proj__desc">
-            An anonymous digital message-in-a-bottle platform that fosters human connection through
-            daily self-improvement tasks and affirmations shared across virtual oceans. Built with a
-            team of four in 24 hours.
-          </p>
-          <div class="proj__tags">
-            <span class="tag">Go</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">React</span>
-            <span class="tag">PostgreSQL</span>
-            <span class="tag">Docker</span>
-            <span class="tag">Supabase</span>
-          </div>
-          <div class="proj__links">
+          <div class="proj-row__links">
             <a
               href="https://github.com/zcroft27/HackMIT"
-              class="proj__link"
+              class="proj-row__link"
               target="_blank"
               rel="noopener noreferrer"
               >GitHub →</a
@@ -98,32 +102,30 @@
           </div>
         </article>
 
-        <article class="proj proj--featured" data-tags="Go TypeScript React">
-          <div class="proj__badge">featured</div>
-          <div class="proj__left">
-            <span class="proj__emoji" aria-hidden="true">🌳</span>
-            <div>
-              <h2 class="proj__title">Arenius</h2>
-              <p class="proj__meta">Generate Product Studio · Jan – Apr 2025</p>
+        <article class="proj-row" data-tags="Go TypeScript React">
+          <span class="proj-row__num" aria-hidden="true">02</span>
+          <div class="proj-row__body">
+            <p class="proj-row__meta">Generate Product Studio · Jan – Apr 2025</p>
+            <h2 class="proj-row__title">Arenius</h2>
+            <p class="proj-row__desc">
+              Carbon-accounting platform to help small and medium-sized businesses track,
+              manage, and reduce their carbon footprint. Integrated with Xero for accounting
+              data and ClimatIQ for emissions calculations. I was Software Technical Lead.
+            </p>
+            <div class="proj-row__tags">
+              <span class="tag">Go</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">React</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">Xero API</span>
+              <span class="tag">ClimatIQ API</span>
             </div>
           </div>
-          <p class="proj__desc">
-            Carbon-accounting platform to empower small-to-medium sized businesses to track, manage,
-            and reduce their carbon footprint. Integrated with the Xero API and ClimatIQ for
-            emissions data.
-          </p>
-          <div class="proj__tags">
-            <span class="tag">Go</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">React</span>
-            <span class="tag">Supabase</span>
-            <span class="tag">Xero API</span>
-            <span class="tag">ClimatIQ API</span>
-          </div>
-          <div class="proj__links">
+          <div class="proj-row__links">
+            <span class="proj-row__badge">Featured</span>
             <a
               href="https://github.com/GenerateNU/arenius"
-              class="proj__link"
+              class="proj-row__link"
               target="_blank"
               rel="noopener noreferrer"
               >GitHub →</a
@@ -131,31 +133,28 @@
           </div>
         </article>
 
-        <article class="proj proj--featured" data-tags="Go TypeScript React Mobile">
-          <div class="proj__badge">featured</div>
-          <div class="proj__left">
-            <span class="proj__emoji" aria-hidden="true">🎶</span>
-            <div>
-              <h2 class="proj__title">Platnm</h2>
-              <p class="proj__meta">Generate Product Studio · Sept – Dec 2024</p>
+        <article class="proj-row" data-tags="Go TypeScript React Mobile">
+          <span class="proj-row__num" aria-hidden="true">03</span>
+          <div class="proj-row__body">
+            <p class="proj-row__meta">Generate Product Studio · Sept – Dec 2024</p>
+            <h2 class="proj-row__title">Platnm</h2>
+            <p class="proj-row__desc">
+              Social music platform for discovering, rating, and reviewing music. Personalized
+              recommendations via Spotify API, friend activity feeds, and album/track review threads.
+            </p>
+            <div class="proj-row__tags">
+              <span class="tag">Go</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">React Native</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">Spotify API</span>
             </div>
           </div>
-          <p class="proj__desc">
-            Social music platform for discovering, rating, and reviewing music while connecting with
-            friends through shared musical interests and personalized recommendations. Integrates
-            with the Spotify API.
-          </p>
-          <div class="proj__tags">
-            <span class="tag">Go</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">React Native</span>
-            <span class="tag">Supabase</span>
-            <span class="tag">Spotify API</span>
-          </div>
-          <div class="proj__links">
+          <div class="proj-row__links">
+            <span class="proj-row__badge">Featured</span>
             <a
               href="https://github.com/GenerateNU/platnm"
-              class="proj__link"
+              class="proj-row__link"
               target="_blank"
               rel="noopener noreferrer"
               >GitHub →</a
@@ -163,29 +162,27 @@
           </div>
         </article>
 
-        <article class="proj" data-tags="TypeScript React MongoDB">
-          <div class="proj__left">
-            <span class="proj__emoji" aria-hidden="true">🐶</span>
-            <div>
-              <h2 class="proj__title">Husky404</h2>
-              <p class="proj__meta">Course Project · Oct – Dec 2024</p>
+        <article class="proj-row" data-tags="TypeScript React MongoDB">
+          <span class="proj-row__num" aria-hidden="true">04</span>
+          <div class="proj-row__body">
+            <p class="proj-row__meta">Course Project · Oct – Dec 2024</p>
+            <h2 class="proj-row__title">Husky404</h2>
+            <p class="proj-row__desc">
+              A Stack Overflow clone with Markdown and LaTeX support, SSO authentication, and
+              comprehensive accessibility features. Full MERN stack with Material UI components.
+            </p>
+            <div class="proj-row__tags">
+              <span class="tag">TypeScript</span>
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Material UI</span>
             </div>
           </div>
-          <p class="proj__desc">
-            An enhanced Stack Overflow clone with Markdown and LaTeX support, SSO authentication,
-            and comprehensive accessibility features. Built with a full MERN stack.
-          </p>
-          <div class="proj__tags">
-            <span class="tag">TypeScript</span>
-            <span class="tag">React</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">MongoDB</span>
-            <span class="tag">Material UI</span>
-          </div>
-          <div class="proj__links">
+          <div class="proj-row__links">
             <a
               href="https://github.com/adescoteaux1/Husky404"
-              class="proj__link"
+              class="proj-row__link"
               target="_blank"
               rel="noopener noreferrer"
               >GitHub →</a
@@ -193,45 +190,43 @@
           </div>
         </article>
 
-        <article class="proj" data-tags="Java">
-          <div class="proj__left">
-            <span class="proj__emoji" aria-hidden="true">📝</span>
-            <div>
-              <h2 class="proj__title">BuJo Bullet Journal</h2>
-              <p class="proj__meta">Course Project · Mar – Apr 2024</p>
+        <article class="proj-row" data-tags="Java">
+          <span class="proj-row__num" aria-hidden="true">05</span>
+          <div class="proj-row__body">
+            <p class="proj-row__meta">Course Project · Mar – Apr 2024</p>
+            <h2 class="proj-row__title">BuJo Bullet Journal</h2>
+            <p class="proj-row__desc">
+              Digital bullet journal app for organizing weekly schedules and tasks. Built
+              with Java and JavaFX following MVC and SOLID design principles throughout.
+            </p>
+            <div class="proj-row__tags">
+              <span class="tag">Java</span>
+              <span class="tag">JavaFX</span>
+              <span class="tag">MVC</span>
+              <span class="tag">SOLID</span>
             </div>
           </div>
-          <p class="proj__desc">
-            Digital bullet journal app for organizing weekly schedules with a clean interface and
-            intuitive task management. Built with Java and JavaFX following MVC and SOLID
-            principles.
-          </p>
-          <div class="proj__tags">
-            <span class="tag">Java</span>
-            <span class="tag">JavaFX</span>
-            <span class="tag">MVC</span>
-            <span class="tag">SOLID Principles</span>
-          </div>
-          <div class="proj__links">
+          <div class="proj-row__links">
             <a
               href="https://github.com/adescoteaux1/BulletJournal"
-              class="proj__link"
+              class="proj-row__link"
               target="_blank"
               rel="noopener noreferrer"
               >GitHub →</a
             >
           </div>
         </article>
+
       </div>
     </main>
 
     <footer class="footer">
       <p class="footer__copy">
-        © 2026 Ally Descoteaux · Built with vanilla HTML, CSS &amp; JS ·
-        <a href="https://github.com/adescoteaux1" target="_blank" rel="noopener noreferrer"
-          >github</a
-        >
+        © 2026 Ally Descoteaux ·
+        <a href="https://github.com/adescoteaux1" target="_blank" rel="noopener noreferrer">GitHub</a>
+        · Built with vanilla HTML, CSS &amp; JS
       </p>
+      <span class="footer__issue">Issue No. 1</span>
     </footer>
 
     <script type="module" src="../js/projects.js"></script>

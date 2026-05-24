@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,7 +6,7 @@
     <meta name="author" content="Ally Descoteaux" />
     <meta
       name="description"
-      content="Ally Descoteaux — software engineer and MSCS student at Northeastern University. I build web and mobile apps, data systems, and things that matter."
+      content="Ally Descoteaux — software engineer and MSCS student at Northeastern. I build web apps, mobile platforms, and data systems."
     />
     <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
     <title>Ally Descoteaux</title>
@@ -14,226 +14,321 @@
     <link rel="stylesheet" href="./css/home.css" />
   </head>
   <body>
-    <nav class="nav">
-      <a href="./index.html" class="nav__logo">ally d.</a>
-      <ul class="nav__links">
-        <li><a href="./index.html" class="nav__link nav__link--active">home</a></li>
-        <li><a href="./pages/projects.html" class="nav__link">projects</a></li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/alexandradescoteaux/"
-            class="nav__link"
-            target="_blank"
-            rel="noopener noreferrer"
-            >linkedin</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://github.com/adescoteaux1"
-            class="nav__link"
-            target="_blank"
-            rel="noopener noreferrer"
-            >github</a
-          >
-        </li>
-      </ul>
-      <button class="nav__toggle" aria-label="Toggle navigation" id="navToggle">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
-
-    <main class="main">
-      <section class="hero">
-        <div class="hero__text">
-          <p class="hero__eyebrow">software engineer · boston, ma</p>
-          <h1 class="hero__name">
-            Building things<br />
-            that <em>matter.</em>
-          </h1>
-          <p class="hero__tagline">
-            I'm Ally: a software engineer finishing my MSCS at Northeastern. I'm interning at
-            Datadog on the Azure Integrations team, and I lead teams at Generate, Northeastern's
-            product studio.
-          </p>
-          <div class="hero__actions">
-            <a href="./pages/projects.html" class="btn btn--primary">see my work</a>
-            <a href="mailto:descoteaux.a@northeastern.edu" class="btn btn--ghost">say hello</a>
-          </div>
-        </div>
-
-        <aside class="hero__aside" aria-label="Quick facts">
-          <ul class="hero__detail-list">
-            <li class="hero__detail">
-              <span class="hero__detail-label">currently</span>
-              <span class="hero__detail-value">
-                <span class="status-dot" aria-hidden="true"></span>MSCS @ Northeastern
-              </span>
-            </li>
-            <li class="hero__detail">
-              <span class="hero__detail-label">next up</span>
-              <span class="hero__detail-value">SWE Intern @ Datadog in June</span>
-            </li>
-            <li class="hero__detail">
-              <span class="hero__detail-label">education</span>
-              <span class="hero__detail-value"
-                >M.S. Computer Science, Northeastern · 2027<br />
-                <span style="font-weight: 400; color: var(--clr-text-muted)"
-                  >B.S. CS &amp; Math · 2026</span
-                ></span
+    <header class="masthead">
+      <div class="masthead__top">
+        <span class="masthead__index">Vol. I &nbsp;·&nbsp; Boston, MA &nbsp;·&nbsp; Est. 2025</span>
+        <nav aria-label="Primary navigation">
+          <ul class="masthead__links" id="navLinks">
+            <li><a href="./index.html" class="masthead__link masthead__link--active">Home</a></li>
+            <li><a href="./pages/projects.html" class="masthead__link">Projects</a></li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/alexandradescoteaux/"
+                class="masthead__link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
               >
             </li>
-            <li class="hero__detail">
-              <span class="hero__detail-label">links</span>
-              <span class="hero__detail-value">
-                <a href="https://github.com/adescoteaux1" target="_blank" rel="noopener noreferrer"
-                  >github</a
-                >
-                ·
-                <a
-                  href="https://www.linkedin.com/in/alexandradescoteaux/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >linkedin</a
-                >
-                ·
-                <a href="mailto:descoteaux.a@northeastern.edu">email</a>
-              </span>
+            <li>
+              <a
+                href="https://github.com/adescoteaux1"
+                class="masthead__link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
             </li>
           </ul>
-        </aside>
-      </section>
+        </nav>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="masthead__name">
+        <h1>Ally <em>&amp;</em> Code</h1>
+        <p class="masthead__sub">Software Engineer &nbsp;·&nbsp; MSCS, Northeastern University &nbsp;·&nbsp; Class of 2027</p>
+      </div>
+    </header>
 
-      <section class="marquee-section" aria-label="Tech skills">
-        <div class="marquee">
-          <div class="marquee__track" id="marqueeTrack">
-            <span>Go</span><span>·</span> <span>TypeScript</span><span>·</span> <span>React</span
-            ><span>·</span> <span>Python</span><span>·</span> <span>PostgreSQL</span><span>·</span>
-            <span>Docker</span><span>·</span> <span>React Native</span><span>·</span>
-            <span>Java</span><span>·</span> <span>AWS</span><span>·</span> <span>MongoDB</span
-            ><span>·</span> <span>Supabase</span><span>·</span> <span>FastAPI</span><span>·</span>
-            <span>Swift</span><span>·</span> <span>C#</span><span>·</span> <span>Node.js</span
-            ><span>·</span> <span>Snowflake</span><span>·</span>
+    <div class="ticker" aria-label="Tech skills">
+      <div class="ticker__track" id="tickerTrack">
+        <span>Go</span><span>·</span>
+        <span>TypeScript</span><span>·</span>
+        <span>React</span><span>·</span>
+        <span>Python</span><span>·</span>
+        <span>PostgreSQL</span><span>·</span>
+        <span>Docker</span><span>·</span>
+        <span>React Native</span><span>·</span>
+        <span>Java</span><span>·</span>
+        <span>AWS</span><span>·</span>
+        <span>MongoDB</span><span>·</span>
+        <span>Supabase</span><span>·</span>
+        <span>Node.js</span><span>·</span>
+        <span>Swift</span><span>·</span>
+        <span>C#</span><span>·</span>
+        <span>Snowflake</span><span>·</span>
+        <span>FastAPI</span><span>·</span>
+      </div>
+    </div>
+
+    <main class="main">
+
+      <!-- ── HERO ─────────────────────────────── -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero__lead">
+          <span class="kicker">Software Engineer</span>
+          <h2 class="hero__headline" id="hero-heading">
+            Building things that <em>ship.</em>
+          </h2>
+          <p class="hero__dek">
+            I've written production code at Verisk, TJX, and Familia IO, led engineering teams
+            at Generate's product studio, and I'm starting at Datadog in June.
+            Finishing my MSCS at Northeastern in April 2027.
+          </p>
+          <div class="hero__actions">
+            <a href="./pages/projects.html" class="btn btn--fill">See my work</a>
+            <a href="mailto:descoteaux.a@northeastern.edu" class="btn">Get in touch</a>
           </div>
         </div>
-      </section>
 
-      <section class="about" aria-labelledby="about-heading">
-        <div class="about__content">
-          <h2 class="section-label" id="about-heading">about</h2>
-          <p class="about__body">
-            I just wrapped up undergrad — CS &amp; Math at Northeastern (April 2026), and I'm
-            finishing the accelerated <strong>Plus One MSCS program</strong> next year. School and
-            work have always run in parallel for me; co-ops at <strong>Verisk</strong> and
-            <strong>TJX</strong>, mobile engineering at <strong>Familia IO</strong>, and nearly
-            three years TA-ing Database Design and OOD.
-          </p>
-          <p class="about__body">
-            At <strong>Generate</strong>, Northeastern's student product studio, I've grown from
-            engineer to tech lead, shipping real products like Arenius (carbon accounting), Platnm
-            (social music), and The Special Standard (therapy &amp; curriculum) for actual clients.
-            In June, I'm interning at <strong>Datadog</strong> on the Azure Integrations team.
-          </p>
-          <p class="about__body">
-            Outside of code: baking, reading, puzzles, hiking, and a running list of things I want
-            to learn.
-          </p>
-        </div>
-      </section>
-
-      <section class="experience" aria-labelledby="exp-heading">
-        <h2 class="section-label" id="exp-heading">experience</h2>
-        <div class="timeline" id="timeline">
-          <div class="timeline__item">
-            <span class="timeline__date">June 2026</span>
-            <div>
-              <h3 class="timeline__role">Software Engineer Intern · Azure Integrations</h3>
-              <p class="timeline__org">Datadog</p>
-            </div>
-          </div>
-          <div class="timeline__item">
-            <span class="timeline__date">Dec 2025 – April 2026</span>
-            <div>
-              <h3 class="timeline__role">Software Technical Lead · SkillSpark</h3>
-              <p class="timeline__org">Generate Product Development Studio</p>
-            </div>
-          </div>
-          <div class="timeline__item">
-            <span class="timeline__date">Jul 2025 – Dec 2025</span>
-            <div>
-              <h3 class="timeline__role">Software Technical Lead · The Special Standard</h3>
-              <p class="timeline__org">Generate Product Development Studio</p>
-            </div>
-          </div>
-          <div class="timeline__item">
-            <span class="timeline__date">May 2025 – Jan 2026</span>
-            <div>
-              <h3 class="timeline__role">Lead Mobile Software Developer</h3>
-              <p class="timeline__org">Familia IO</p>
-            </div>
-          </div>
-          <div class="timeline__item">
-            <span class="timeline__date">Jan 2025 – Jun 2025</span>
-            <div>
-              <h3 class="timeline__role">DevOps QA Software Developer Co-op</h3>
-              <p class="timeline__org">Verisk Extreme Event Solutions</p>
-            </div>
-          </div>
-          <div class="timeline__item">
-            <span class="timeline__date">Jan 2024 – Jun 2024</span>
-            <div>
-              <h3 class="timeline__role">Risk Assurance Data &amp; Systems Co-op</h3>
-              <p class="timeline__org">TJX Companies</p>
-            </div>
-          </div>
-          <div class="timeline__item">
-            <span class="timeline__date">Sept 2023 – May 2026</span>
-            <div>
-              <h3 class="timeline__role">Database Design &amp; OOD Teaching Assistant</h3>
-              <p class="timeline__org">Khoury College of Computer Sciences, Northeastern</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Creative addition: interactive terminal -->
-      <section class="terminal-section" aria-labelledby="terminal-heading">
-        <h2 class="section-label" id="terminal-heading">ask me anything</h2>
-        <div class="terminal" id="terminal" role="region" aria-label="Interactive terminal">
-          <div class="terminal__bar">
-            <span class="terminal__dot terminal__dot--red"></span>
-            <span class="terminal__dot terminal__dot--yellow"></span>
-            <span class="terminal__dot terminal__dot--green"></span>
-            <span class="terminal__bar-title">ally@home ~ %</span>
-          </div>
-          <div class="terminal__output" id="terminalOutput" aria-live="polite">
-            <p class="terminal__line terminal__line--system">
-              Hi! Type <kbd>help</kbd> to see what I can do.
+        <div class="hero__sidebar">
+          <div class="sidebar-item">
+            <p class="sidebar-item__label">Status</p>
+            <p class="sidebar-item__value">
+              <span class="status-pip" aria-hidden="true"></span>Open to new grad roles
             </p>
           </div>
-          <div class="terminal__input-row">
-            <span class="terminal__prompt" aria-hidden="true">ally@home ~ %</span>
+          <div class="sidebar-item">
+            <p class="sidebar-item__label">Next up</p>
+            <p class="sidebar-item__value">SWE Intern @ Datadog · Jun 2026</p>
+          </div>
+          <div class="sidebar-item">
+            <p class="sidebar-item__label">Education</p>
+            <p class="sidebar-item__value">
+              M.S. Computer Science<br />
+              Northeastern · 2027
+            </p>
+          </div>
+        </div>
+
+        <div class="hero__sidebar-bottom">
+          <div class="sidebar-item">
+            <p class="sidebar-item__label">Find me</p>
+            <p class="sidebar-item__value">
+              <a href="https://github.com/adescoteaux1" target="_blank" rel="noopener noreferrer">github.com/adescoteaux1</a><br />
+              <a href="https://linkedin.com/in/alexandradescoteaux/" target="_blank" rel="noopener noreferrer">linkedin/alexandradescoteaux</a><br />
+              <a href="mailto:descoteaux.a@northeastern.edu">descoteaux.a@northeastern.edu</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── ABOUT ───────────────────────────── -->
+      <section class="about-section" aria-labelledby="about-heading">
+        <div class="section-rule">
+          <span class="section-rule__label" id="about-heading">About</span>
+          <span class="section-rule__line"></span>
+        </div>
+        <p class="about__body">
+          I graduated with a B.S. in CS &amp; Mathematics from Northeastern in April 2026, and
+          I'm wrapping up my MSCS through the <strong>Plus One program</strong> — Northeastern's
+          combined degree that lets you finish a master's in one extra year. I'll be done in
+          April 2027. School and work have always overlapped for me, and I like it that way.
+        </p>
+        <p class="about__body">
+          My co-ops took me to <strong>Verisk</strong> (DevOps QA) and <strong>TJX Companies</strong>
+          (risk assurance data engineering). I led mobile engineering at
+          <strong>Familia IO</strong> from May 2025 through January 2026, building their
+          mental-health mobile app. I also TA'd Database Design and OOD at Khoury for nearly
+          three years, wrapping in May 2026.
+        </p>
+        <p class="about__body">
+          Outside of code I'm into baking, puzzles, reading, and getting outside when Boston
+          cooperates. I care a lot about explaining things well — which is probably why I kept
+          coming back to TA-ing.
+        </p>
+      </section>
+
+      <!-- ── EXPERIENCE ──────────────────────── -->
+      <section class="exp-section" aria-labelledby="exp-heading">
+        <div class="section-rule">
+          <span class="section-rule__label" id="exp-heading">Experience</span>
+          <span class="section-rule__line"></span>
+        </div>
+        <table class="exp-table" aria-label="Work experience">
+          <tbody id="expBody">
+            <tr>
+              <td class="exp-date">Jun 2026 – Aug 2026</td>
+              <td>
+                <p class="exp-role">Software Engineer Intern · Azure Integrations</p>
+                <p class="exp-org">Datadog</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="exp-date">Dec 2025 – Present</td>
+              <td>
+                <p class="exp-role">Software Technical Lead — SkillSpark</p>
+                <p class="exp-org">Generate Product Development Studio</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="exp-date">Jul – Dec 2025</td>
+              <td>
+                <p class="exp-role">Software Technical Lead — The Special Standard</p>
+                <p class="exp-org">Generate Product Development Studio</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="exp-date">May 2025 – Jan 2026</td>
+              <td>
+                <p class="exp-role">Lead Mobile Software Developer</p>
+                <p class="exp-org">Familia IO</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="exp-date">Jan – Jun 2025</td>
+              <td>
+                <p class="exp-role">DevOps QA Software Developer Co-op</p>
+                <p class="exp-org">Verisk Extreme Event Solutions</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="exp-date">Jan – Jun 2024</td>
+              <td>
+                <p class="exp-role">Risk Assurance Data &amp; Systems Co-op</p>
+                <p class="exp-org">TJX Companies</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="exp-date">Sept 2023 – May 2026</td>
+              <td>
+                <p class="exp-role">Teaching Assistant — Database Design &amp; OOD</p>
+                <p class="exp-org">Khoury College of Computer Sciences, Northeastern</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ── FEATURED PROJECTS ───────────────── -->
+      <section class="projects-section" aria-labelledby="proj-heading">
+        <div class="section-rule">
+          <span class="section-rule__label" id="proj-heading">Selected Work</span>
+          <span class="section-rule__line"></span>
+        </div>
+        <div class="projects-broadsheet">
+          <article class="proj-cell">
+            <p class="proj-num">01 / HackMIT</p>
+            <h3 class="proj-title">Castaway</h3>
+            <p class="proj-desc">
+              Anonymous message-in-a-bottle platform. Built with a team of four in 24 hours —
+              daily self-improvement tasks shared across virtual oceans.
+            </p>
+            <div class="proj-tags">
+              <span class="tag">Go</span>
+              <span class="tag">React</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+            <a
+              href="https://github.com/zcroft27/HackMIT"
+              class="proj-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Castaway on GitHub"
+              >GitHub →</a
+            >
+          </article>
+          <article class="proj-cell">
+            <p class="proj-num">02 / Generate Studio</p>
+            <h3 class="proj-title">Arenius</h3>
+            <p class="proj-desc">
+              Carbon-accounting platform for SMBs to track and reduce their footprint.
+              Integrated with Xero and ClimatIQ APIs. I was tech lead.
+            </p>
+            <div class="proj-tags">
+              <span class="tag">Go</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Supabase</span>
+            </div>
+            <a
+              href="https://github.com/GenerateNU/arenius"
+              class="proj-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Arenius on GitHub"
+              >GitHub →</a
+            >
+          </article>
+          <article class="proj-cell">
+            <p class="proj-num">03 / Generate Studio</p>
+            <h3 class="proj-title">Platnm</h3>
+            <p class="proj-desc">
+              Social music platform for discovering and reviewing music with Spotify-powered
+              recommendations and friend activity feeds.
+            </p>
+            <div class="proj-tags">
+              <span class="tag">React Native</span>
+              <span class="tag">Go</span>
+              <span class="tag">Spotify API</span>
+            </div>
+            <a
+              href="https://github.com/GenerateNU/platnm"
+              class="proj-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Platnm on GitHub"
+              >GitHub →</a
+            >
+          </article>
+        </div>
+        <div class="projects-cta">
+          <a href="./pages/projects.html" class="btn btn--red">All projects →</a>
+        </div>
+      </section>
+
+      <!-- ── TERMINAL (creative feature) ────── -->
+      <section aria-labelledby="terminal-heading">
+        <div class="section-rule">
+          <span class="section-rule__label" id="terminal-heading">Ask me anything</span>
+          <span class="section-rule__line"></span>
+        </div>
+        <div class="terminal-section" role="region" aria-label="Interactive terminal" id="terminal">
+          <div class="terminal-header">
+            <span class="terminal-header__title">ally@northeastern ~ %</span>
+            <div class="terminal-header__dots" aria-hidden="true">
+              <span class="t-dot t-dot--r"></span>
+              <span class="t-dot t-dot--y"></span>
+              <span class="t-dot t-dot--g"></span>
+            </div>
+          </div>
+          <div class="terminal-output" id="terminalOutput" aria-live="polite">
+            <p class="t-line t-line--sys">Type <kbd>help</kbd> to see available commands.</p>
+          </div>
+          <div class="terminal-input-row">
+            <span class="terminal-prompt" aria-hidden="true">~%</span>
             <input
-              class="terminal__input"
+              class="terminal-input"
               id="terminalInput"
               type="text"
               autocomplete="off"
               spellcheck="false"
               aria-label="Terminal command input"
-              placeholder="type a command..."
+              placeholder="enter command..."
             />
           </div>
         </div>
       </section>
+
     </main>
 
     <footer class="footer">
       <p class="footer__copy">
-        © 2026 Ally Descoteaux · Made with HTML, CSS &amp; JS ·
-        <a href="https://github.com/adescoteaux1" target="_blank" rel="noopener noreferrer"
-          >github</a
-        >
+        © 2026 Ally Descoteaux ·
+        <a href="https://github.com/adescoteaux1" target="_blank" rel="noopener noreferrer">GitHub</a>
+        · Built with vanilla HTML, CSS &amp; JS
       </p>
+      <span class="footer__issue">Issue No. 1</span>
     </footer>
 
     <script type="module" src="./js/main.js"></script>

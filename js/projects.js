@@ -1,33 +1,26 @@
 import { initNav } from "./nav.js";
 
 /**
- * Filter projects by tag.
- * Reads data-tags attribute from each project card.
+ * Tag-based project filter.
+ * Reads data-tags on each .proj-row and shows/hides based on active filter.
  */
-function initProjectFilters() {
+function initFilter() {
   const buttons = document.querySelectorAll(".filter-btn");
-  const projects = document.querySelectorAll(".proj");
+  const rows = document.querySelectorAll(".proj-row");
 
-  if (!buttons.length || !projects.length) return;
+  if (!buttons.length || !rows.length) return;
 
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const filter = btn.dataset.filter;
 
-      // Update active state
       buttons.forEach((b) => b.classList.remove("filter-btn--active"));
       btn.classList.add("filter-btn--active");
 
-      // Show/hide projects
-      projects.forEach((proj) => {
-        const tags = proj.dataset.tags || "";
-        const matches = filter === "all" || tags.includes(filter);
-
-        if (matches) {
-          proj.classList.remove("proj--hidden");
-        } else {
-          proj.classList.add("proj--hidden");
-        }
+      rows.forEach((row) => {
+        const tags = row.dataset.tags || "";
+        const visible = filter === "all" || tags.includes(filter);
+        row.classList.toggle("proj-row--hidden", !visible);
       });
     });
   });
@@ -35,5 +28,5 @@ function initProjectFilters() {
 
 document.addEventListener("DOMContentLoaded", () => {
   initNav();
-  initProjectFilters();
+  initFilter();
 });
