@@ -15,7 +15,9 @@ Personal homepage built with vanilla HTML5, CSS3, and ES6+ JavaScript modules.
 
 ## Screenshot
 
-> *(Add after deploying — screenshot of `index.html`)*
+![Screenshot1](./images/screenshot1.png)
+![Screenshot2](./images/screenshot2.png)
+![Screenshot3](./images/screenshot3.png)
 
 ---
 
