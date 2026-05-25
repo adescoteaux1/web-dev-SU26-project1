@@ -27,7 +27,7 @@ Personal homepage built with vanilla HTML5, CSS3, and ES6+ JavaScript modules.
 | --------------- | --------------------- | ------------------------------------------------------------------------------------------------- |
 | Home            | `index.html`          | Masthead, skills ticker, hero, about, experience table, featured projects, interactive terminal   |
 | Projects        | `pages/projects.html` | Full project list with live tag filtering                                                         |
-| Beyond the Code | `pages/hobbies.html`  | AI-generated essay on how hobbies (hiking, baking, puzzles, reading) shape engineering practice |
+| Beyond the Code | `pages/hobbies.html`  | AI-generated essay on how hobbies (hiking, baking, puzzles, reading) shape engineering practice   |
 
 ---
 
@@ -114,31 +114,8 @@ Deployed on **Netlify** with continuous deployment from the `main` branch — ev
 
 **Used for:** Initial generation of the "Beyond the Code" page (`pages/hobbies.html` + `css/hobbies.css`) as required by the rubric. Content, copy, and formatting were then revised by me.
 
-**Prompt (paraphrased):**
+**Prompt:**
 
 > Build a simple HTML page I can add to my personal website that shows how my different hobbies — hiking, baking, puzzles, reading — all impact who I am and my work as a software engineer. The page should illustrate how many different aspects of ourselves play a part in education/work success. Include a disclaimer that the page is AI-written. Match the rest of the site's styling: Playfair Display + Barlow + Barlow Condensed + IBM Plex Mono; paper/ink color palette (`--ink: #1a1713`, `--paper: #f5f0e8`, `--red: #c0392b`); 1160px max width; ruled-line section dividers.
 
 The color and typography tokens passed in match the `:root` variables in `css/styles.css`, so the generated page inherits the same design system as the rest of the site.
-
----
-
-## Rubric Checklist
-
-- [x] ES6 modules (`type="module"` in HTML + `"type": "module"` in package.json)
-- [x] No jQuery, no component libraries
-- [x] CSS, JS, Images in separate folders
-- [x] Meta: author, description, icon
-- [x] Original JS feature >5 lines, no libraries (`js/terminal.js`, ~190 lines)
-- [x] Prettier formatted (via `eslint-plugin-prettier`)
-- [x] W3C compliant — validated at validator.w3.org
-- [x] ESLint config present (flat config)
-- [x] All images have alt attributes
-- [x] 2+ HTML pages at different URLs (3 pages)
-- [x] CSS classes used throughout
-- [x] Semantic HTML only (no div-buttons etc.)
-- [x] Clean CSS, no `!important`
-- [x] Flexbox and CSS Grid used
-- [x] MIT License
-- [x] `package.json` with all dependencies
-- [x] GenAI usage documented above
-- [x] Deployed to a public URL
