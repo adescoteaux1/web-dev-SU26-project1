@@ -4,6 +4,8 @@
 **Class:** CS5610 — Web Development
 **License:** MIT
 **Live site:** <https://ades-webdevproject1.netlify.app/>
+**Demo Video:** <https://drive.google.com/file/d/1sHghdIH07xMjW17Gxx3ejJ6sf5KeF0aP/view?usp=sharing>
+**Slides:** <https://docs.google.com/presentation/d/1s2moULWwfrQ_O9RJyuL_B5Vgjp0-LvzhWEOHXuwtO4o/edit?usp=sharing>
 
 ---
 
