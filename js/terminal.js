@@ -81,9 +81,13 @@ const COMMANDS = {
 };
 
 const EASTER_EGGS = {
-  ls: () => ["about.md  projects/  experience.log  contact.txt  thesis-draft.pdf"],
+  ls: () => [
+    "about.md  projects/  experience.log  contact.txt  thesis-draft.pdf",
+  ],
   pwd: () => ["/home/ally/northeastern/mscs"],
-  sudo: () => ["You're not in the sudoers file. This incident will be reported."],
+  sudo: () => [
+    "You're not in the sudoers file. This incident will be reported.",
+  ],
   "git status": () => [
     "On branch main",
     "Changes not staged for commit:",
